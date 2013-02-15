@@ -47,7 +47,7 @@ module Sidekiq
           end
         rescue Exception => ex
           handle_exception(ex, msg || { :message => msgstr })
-          raise
+#          raise
         ensure
           work.acknowledge
         end
